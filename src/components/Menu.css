@@ -1,22 +1,21 @@
 #sideMenu {
   color: rgb(176, 180, 190);
-  padding:  10px;
-  background-color: #31353E;
+  padding: 10px;
+  background-color: #030014;
   /*border-width: 4px;*/
   /*border-style: solid;*/
   width: 400px;
   position: fixed;
-  right: 0px;
-  top: 45px; /* This should match the height of the top menu bar */
-  height: calc(100vh - 58px);
+  left: 0px;
+  top: 0px;
+  height: 100vh;
   z-index: 999;
-  transition: transform .4s
-              cubic-bezier(0, .52, 0, 1);
+  transition: transform 0.4s cubic-bezier(0, 0.52, 0, 1);
   overflow-y: scroll;
 }
 
 #sideMenu.hide {
-  transform: translate3d(450px, 0, 0);
+  transform: translate3d(-450px, 0, 0);
 }
 
 #sideMenu.show {
@@ -24,44 +23,47 @@
 }
 
 #sideMenu button {
-  float: right;
-  font-size: 20px;
-  background:  none;
+  font-size: 22px;
+  background: none;
   border: none;
   padding: 0;
-  margin-right: 10px;
+  margin-top: 18px;
+  margin-left: 18px;
   cursor: pointer;
   outline: inherit;
-  color: #777E8B;
+  color: white;
   font-weight: 100;
 }
 
 #sideMenu ul {
   list-style-type: none;
-  padding:  0;
-  margin:  0;
+  padding: 0;
+  margin: 0;
 }
 
 #sideMenu li {
-  padding-top:  7px;
-  padding-bottom:  7px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   font-size: 1rem;
+  font-family: "Anek Latin", sans-serif;
 }
 
 #sideMenu li.section {
-  color:  white;
-  font-size: 1.3rem;
+  color: #9A99A1;
+  font-size: 1.8rem;
   font-weight: 500;
-  padding-left:  10px;
+  padding-left: 18px;
 }
 
 #sideMenu li a {
   text-decoration: none;
-  color: #777E8B;
+  color: white;
   display: block;
-  width:  100%;
-  height:  100%;
-  padding-left:  10px;
+  width: 100%;
+  height: 100%;
+  padding-left: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 #sideMenu li a.disabled {
