@@ -45,8 +45,10 @@ class NavBar extends React.Component {
 
   render() {
     const href = this.state.easterEgg ? '/multisat' : '/';
+    const overlayVisibilityClass = this.state.menuVisible ? 'visible': '';
     return(
       <div className='navbar'>
+        <div id='sideMenu__screenOverlay' className={overlayVisibilityClass}></div>
         <Menu visible={this.state.menuVisible} setMenuVisible={this.setMenuVisible}/>
         <div className='title-container'>
           <Link to={href}>

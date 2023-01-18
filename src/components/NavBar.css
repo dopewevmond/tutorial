@@ -46,3 +46,22 @@
   color: #777E8B;
   font-weight: 100;
 }
+
+#sideMenu__screenOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition-property: opacity;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#sideMenu__screenOverlay.visible {
+  visibility: visible;
+  opacity: 1;
+}
