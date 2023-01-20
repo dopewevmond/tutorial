@@ -1,0 +1,33 @@
+#panelContainer {
+  display: grid;
+  grid-template-columns: 390px auto;
+  grid-template-rows: auto 240px;
+  height: calc(100vh - 45px); /* subtracting navbar height from viewport height */
+  width: 100vw;
+  box-sizing: content-box;
+}
+
+#instructionsPanel {
+  z-index: 3;
+  position: relative;
+  overflow-y: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+#mapPanel {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+#consolePanel {
+  overflow-y: scroll;
+  z-index: 3;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+@media (min-width: 1512px) {
+  #panelContainer {
+    grid-template-columns: 508px auto;
+    grid-template-rows: auto 323px;
+  }
+}
