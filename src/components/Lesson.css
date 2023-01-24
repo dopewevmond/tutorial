@@ -1,7 +1,7 @@
 .lesson {
   height:  100%;
   background-color: #242830;
-  overflow:  scroll;
+  /* overflow:  scroll; -- this line adds a redundant vertical scrollbar in chrome */
   display: flex;
   flex-direction: column;
   color: #777E8B;
@@ -10,6 +10,8 @@
 
 .lesson-content {
   width:  100%;
+  /* the vertical scrollbar should fill up all the height even when the content does not overflow */
+  height: 100%;
   padding:  16px;
   overflow-y:  scroll;
   overflow-x: hidden;
